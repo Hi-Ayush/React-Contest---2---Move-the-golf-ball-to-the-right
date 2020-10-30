@@ -15,7 +15,7 @@ class App extends Component {
 
   //call back function
   buttonClickHandler() {
-    this.setState((this.renderBall = true));
+    this.setState({ renderBall: true });
   }
   renderChoice() {
     if (this.state.renderBall) {
