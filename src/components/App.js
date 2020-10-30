@@ -28,10 +28,13 @@ class App extends Component {
 
   //bind ArrowRight keydown event
   componentDidMount() {
-    document.addEventListener("ArrowRight", () => {
-      this.setState({ posi: this.state.posi + 5 }, () =>
-        this.setState({ position: { left: this.state.posi + "px" } })
-      );
+    document.addEventListener("Keydown", () => {
+      if ("ArrowRight") {
+        console.log("hi");
+        this.setState({ posi: this.state.posi + 5 }, () =>
+          this.setState({ position: { left: this.state.posi + "px" } })
+        );
+      }
     });
   }
 
