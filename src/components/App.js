@@ -28,11 +28,11 @@ class App extends Component {
 
   //bind ArrowRight keydown event
   componentDidMount() {
-    document.addEventListener("Keydown", () => {
-      if ("ArrowRight") {
-        console.log("hi");
+    document.addEventListener("keydown", (event) => {
+      if (event.keyCode === 39) {
+        // console.log("hi");
         this.setState({ posi: this.state.posi + 5 }, () =>
-          this.setState({ position: { left: this.state.posi + "px" } })
+          this.setState({ ballPosition: { left: this.state.posi + "px" } })
         );
       }
     });
